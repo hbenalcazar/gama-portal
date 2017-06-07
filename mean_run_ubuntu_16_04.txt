@@ -1,0 +1,15 @@
+Starting the MEAN stack
+
+1. start/restart/stop MongoDB with: sudo service mongod start/restart/stop
+
+2. verify in: /var/log/mongodb/mongod.log 
+
+3. from root app directory run: npm start
+
+4. to shut down app use: killall node
+
+5. check shut down with: ps aux | grep node
+
+6. if still running use: kill -9 PROCESS_ID (second from left)
+
+
