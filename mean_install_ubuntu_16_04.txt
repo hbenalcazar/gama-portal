@@ -1,0 +1,56 @@
+MEAN Install - Linux 16.04
+
+1. INSTALL NODE
+
+Check for old versions:
+dpkg --get-selections | grep node 
+
+Remove any old installs:
+sudo apt-get remvoe --purge node
+
+Install build-essential package:
+sudo apt-get install build-essential checkinstall
+
+Install libssl-dev package:
+sudo apt-get install libssl-dev
+
+Install and update nvm:
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash 
+
+Close terminal and reopen, then run command below to verify installation:
+command -v nvm
+
+Download, compile, and install latest versino of Node:
+nvm instlal 6.*
+
+To tell nvm which version of Node to use in any new shell:
+nvm use [version] (do not use brackets, just the version)
+
+Or just set a default version for new shells with:
+nvm alias default node
+
+
+2. INSTALL MONGO DB
+
+Import public key for package manager:
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+
+Create a list file for MongoDB:
+echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+
+Reload local package database:
+sudo apt-get update
+
+Install MongoDB packages:
+sudo apt-get install -y mongodb-org
+
+3. INSTALL MEAN STACK
+
+Git latest version of the app
+
+cd into root directory of the app
+
+npm install (if bower is not in package.json, install bower first)
+
+npm start (to start and check server)
+
