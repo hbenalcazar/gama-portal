@@ -1,0 +1,305 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"g",
+				"g"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.view.html",
+			"settings":
+			{
+				"buffer_size": 11913,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/dev/gama-portal/client/modules/footer/footer.view.html",
+			"settings":
+			{
+				"buffer_size": 288,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/dev/gama-portal",
+		"/C/dev/gama-portal/client",
+		"/C/dev/gama-portal/client/modules",
+		"/C/dev/gama-portal/client/modules/footer",
+		"/C/dev/gama-portal/client/modules/index"
+	],
+	"file_history":
+	[
+		"/C/wamp/www/gamatraining/index.php",
+		"/C/wamp/www/gamatraining/login.php",
+		"/C/wamp/www/gamatraining/profile.php",
+		"/C/wamp/www/gamatraining/inner_view/scheduler.php",
+		"/C/wamp/www/gamatraining/inner_view/users.php",
+		"/C/wamp/www/gamatraining/src/gamautils.php",
+		"/C/wamp/www/gamatraining/inner_view/future.php",
+		"/C/wamp/www/gamatraining/src/classmatcher.js",
+		"/C/wamp/www/gamatraining/admin.php",
+		"/C/wamp/www/gamatraining/pilot.php",
+		"/C/wamp/www/gamatraining/logout.php",
+		"/C/wamp/www/gamatraining/inner_view/history.php",
+		"/C/wamp/www/gamatraining/inner_view/dashboard-home.php",
+		"/C/wamp/www/gamatraining/session.php",
+		"/C/wamp/apps/phpmyadmin4.5.5.1/libraries/config.default.php",
+		"/C/wamp/apps/phpmyadmin4.5.5.1/libraries/config/ConfigFile.php",
+		"/C/wamp/apps/phpmyadmin4.5.5.1/libraries/Config.php",
+		"/C/wamp/apps/phpmyadmin4.5.5.1/libraries/config.values.php",
+		"/C/wamp/apps/phpmyadmin4.5.5.1/test/test_data/config.inc.php",
+		"/C/wamp/bin/apache/apache2.4.18/bin/php.ini",
+		"/C/wamp/apps/phpmyadmin4.5.5.1/setup/config.php",
+		"/C/wamp/www/gamatraining/sql/db629099796.sql",
+		"/C/wamp/apps/phpmyadmin4.5.5.1/user_password.php",
+		"/C/wamp/apps/phpmyadmin4.5.5.1/libraries/display_change_password.lib.php",
+		"/C/wamp/www/gamatraining/src/gamautils.js",
+		"/C/wamp/apps/phpmyadmin4.5.5.1/config.sample.inc.php",
+		"/C/wamp/www/gamatraining/courses.php",
+		"/C/wamp/www/gamatraining/process/getJSON.php",
+		"/C/wamp/www/gamatraining/scheduler.php",
+		"/C/wamp/www/gamatraining/connect.php",
+		"/C/wamp/www/gamatraining/_users.php",
+		"/C/wamp/www/gamatraining/lightTheme.css",
+		"/C/Users/hbenalcazar/Documents/gamatraining/index.php",
+		"/C/Users/hbenalcazar/Documents/gamatraining/sql/db629099796.sql",
+		"/C/Users/hbenalcazar/Documents/gamatraining/process/setBestDates.php",
+		"/C/Users/hbenalcazar/Documents/gamatraining/process/loadCrewID.php",
+		"/C/Users/hbenalcazar/Documents/gamatraining/process/getJSON.php",
+		"/C/Users/hbenalcazar/Documents/gamatraining/model/gamautils.js",
+		"/C/Users/hbenalcazar/Documents/gamatraining/connect.php",
+		"/C/Users/hbenalcazar/Documents/gamatraining/form.php",
+		"/C/Users/hbenalcazar/Documents/gamatraining/controller/core-objects.js",
+		"/C/Users/hbenalcazar/Documents/gamatraining/controller/core.js"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"#dashboard",
+			"dahboard",
+			"password",
+			"root",
+			"password",
+			"root",
+			"password",
+			"root",
+			"password",
+			"folr"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.view.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11913,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								253,
+								253
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/dev/gama-portal/client/modules/footer/footer.view.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 288,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								203,
+								203
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "gama-portal.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 199.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
