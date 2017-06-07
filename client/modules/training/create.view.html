@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="center-block training-post">
+        <div class="row">
+            <div class="col-md-7 col-md-offset-3">
+                <h1>Create Training</h1>
+            </div>
+        </div>
+        <div class="row">
+            <form name="trainingForm" class="training-edit form-horizontal" role="form" data-ng-submit="vm.create(trainingForm.$valid)" novalidate>
+                <div class="form-group" ng-class="{'has-warning': trainingForm.title.$dirty && trainingForm.title.$invalid, 'has-success': trainingForm.title.$dirty && trainingForm.title.$valid}">
+                    <label class="col-md-1 control-label">Title</label>
+                    <div class="col-md-9">
+                        <input name="title" type="text" class="form-control" data-ng-model="vm.training.title" id="title" placeholder="Title" ng-minlength="2" required>
+                        <p ng-show="trainingForm.title.$error.required && trainingForm.title.$dirty" class="help-block">Title is required</p>
+                        <p ng-show="trainingForm.title.$error.minlength" class="help-block">Title must be at least 2 characters long</p>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{'has-warning': trainingForm.content.$dirty && trainingForm.content.$invalid, 'has-success': trainingForm.content.$dirty && trainingForm.content.$valid}">
+                    <label for="content" class="col-md-1 control-label">Content</label>
+                    <div class="col-md-9">
+                        <textarea name="content" data-ng-model="vm.training.content" id="content" cols="30" rows="10" placeholder="Content" class="form-control" ng-minlength="2" required></textarea>
+                        <p ng-show="trainingForm.content.$error.required && trainingForm.content.$dirty" class="help-block">Content is required</p>
+                        <p ng-show="trainingForm.content.$error.minlength" class="help-block">Content must be at least 2 characters long</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-9">
+                        <button type="submit" class="btn btn-primary" ng-disabled="trainingForm.$invalid">Submit</button>
+                        <a href="/training/list" class="btn btn-default">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div><!-- /.row -->
+    </div>
+</div>
