@@ -1,0 +1,16 @@
+<div class="container" ng-init="vm.find()">
+	<div class="row">
+        <div class="col-md-7 col-md-offset-3">
+            <h1>View Scheduler</h1>
+        </div>
+    </div>
+	<div class="row">
+	    <div class="col-md-7 col-md-offset-3">
+            <h2 class="scheduler-post-title">{{vm.scheduler.title}}</h2>
+            <a href="/scheduler/edit/{{vm.scheduler._id}}"><i class="fa fa-pencil-square-o"></i></a>
+            <a ng-click="vm.delete(vm.scheduler._id)"><i class="fa fa-trash"></i></a>
+            <p class="scheduler-post-meta">{{vm.scheduler.created |date:'medium'}} by {{vm.scheduler.user.firstName}} {{vm.scheduler.user.lastName}}</p>
+            <p>{{vm.scheduler.content}}</p>
+	    </div>
+	 </div>
+</div>
