@@ -40,19 +40,25 @@ function routes (self) {
   //     self.app.use(m.route, m.app)
   //   })
   // })
+
+  // HB: load all the backend module routes
   var files = glob.sync('server/modules/**/*.routes.js')
+
   files.forEach(function (router) {
     debug('Route : %s', router)
     require('../' + router)(self.app, self.middleware, self.mail, self.settings, self.models, self.logger)
   })
+
   self.app.use(express.static(path.join(self.dir, 'client/'), {
     maxAge: 31557600000
   }))
+
   self.app.get('/api/seo/*', function (req, res) {
     seo(self, req, req.path.replace('/api/seo', ''), function (seoSettings) {
       res.send(seoSettings)
     })
   })
+  
   self.app.get('/api/*', nothingFoundHandler('nothing found in api'))
   self.app.get('/bower_components/*', nothingFoundHandler('nothing found in bower_components'))
   self.app.get('/images/*', nothingFoundHandler('nothing found in images'))

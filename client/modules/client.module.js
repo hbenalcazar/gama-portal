@@ -9,6 +9,6 @@
     'app.user',
     'app.blog',
     'app.admin' ,
- 'app.scheduler' // DONT REMOVE - APP GENERATOR
+    'app.scheduler' // training/scheduler module
   ])
 })()
