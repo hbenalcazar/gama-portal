@@ -1,0 +1,35 @@
+<div class="container" ng-init="vm.find()">
+    <div class="center-block scheduler-post">
+        <div class="row">
+            <div class="col-md-7 col-md-offset-3">
+                <h1>Edit Scheduler</h1>
+            </div>
+        </div>
+        <div class="row">
+            <form name="schedulerForm" class="scheduler-edit form-horizontal" role="form" data-ng-submit="vm.update(schedulerForm.$valid)" novalidate>
+                <div class="form-group" ng-class="{'has-warning': schedulerForm.title.$dirty && schedulerForm.title.$invalid, 'has-success': schedulerForm.title.$dirty && schedulerForm.title.$valid}">
+                    <label class="col-md-1 control-label">Title</label>
+                    <div class="col-md-9">
+                        <input name="title" type="text" class="form-control" data-ng-model="vm.scheduler.title" id="title" placeholder="Title" ng-minlength="2" required>
+                        <p ng-show="schedulerForm.title.$error.required && schedulerForm.title.$dirty" class="help-block">Title is required</p>
+                        <p ng-show="schedulerForm.title.$error.minlength" class="help-block">Title must be at least 2 characters long</p>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{'has-warning': schedulerForm.content.$dirty && schedulerForm.content.$invalid, 'has-success': schedulerForm.content.$dirty && schedulerForm.content.$valid}">
+                    <label for="content" class="col-md-1 control-label">Content</label>
+                    <div class="col-md-9">
+                        <textarea name="content" data-ng-model="vm.scheduler.content" id="content" cols="30" rows="10" placeholder="Content" class="form-control" ng-minlength="2" required></textarea>
+                        <p ng-show="schedulerForm.content.$error.required && schedulerForm.content.$dirty" class="help-block">Content is required</p>
+                        <p ng-show="schedulerForm.content.$error.minlength" class="help-block">Content must be at least 2 characters long</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-9">
+                        <button type="submit" class="btn btn-info" ng-disabled="schedulerForm.$invalid">Submit</button>
+                        <a href="/scheduler/list" class="btn btn-default">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div><!-- /.row -->
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container" ng-init="vm.list()">
+  <div class="row">
+      <div class="col-sm-12 scheduler-header text-center">
+        <h1 class="scheduler-title">MeanStackJS Schedulers</h1>
+        <p class="lead scheduler-description">Using the official example template of creating a scheduler module with Bootstrap.</p>
+      </div>
+  </div> 
+  <div class="row">
+    <div class="center-block scheduler-main ">
+      <div ng-show="vm.schedulers.length == 0">
+        <h3>No Scheduler Data Points</h3>
+        <a class="btn btn-primary" href="/scheduler/create">Create One Now</a>
+      </div>
+      
+      <div class="scheduler-post" ng-repeat="(key, value) in vm.schedulers | orderBy:'-date'">
+        <a href="/scheduler/view/{{value._id}}"><h2 class="scheduler-post-title">{{value.title}}</h2></a>
+        <span ng-show="vm.UserFactory.loggedin">
+          <a href="/scheduler/edit/{{value._id}}"><i class="fa fa-pencil-square-o"></i></a>
+          <a ng-click="vm.delete(value._id)"><i class="fa fa-trash"></i></a>
+        </span>
+        
+        <p class="scheduler-post-meta">
+          on {{value.created |date:'medium'}}
+        </p>
+        
+        <p>{{value.content}}</p>
+      </div><!-- /.scheduler-post -->
+
+    </div><!-- /.scheduler-main -->
+
+  </div>
+    
+</div>
