@@ -1,0 +1,38 @@
+<div class="container" ng-init="vm.find()">
+	
+    <div class="row">
+        <div class="col-md-7 col-md-offset-3">
+            <h1>Crew Data</h1>
+        </div>
+    </div>
+
+	<div class="row">
+	    <div class="col-md-7 col-md-offset-3">
+            <h2 class="pilotdata-post-title">ID: {{ vm.pilotdata.crewcode }}</h2>
+            <hr></hr>
+            <h4>Certificates:</h4>
+            <div ng-repeat="certificate in vm.pilotdata.certificates">
+                Type {{$index + 1}}: <code>{{certificate.type}}</code> / Number: <code>{{certificate.number}}</code> / Exp: <code>{{certificate.expiration}}</code></br>
+                &nbsp;- Endorsements: <span ng-repeat="endorsement in certificate.endorsements"><code>{{endorsement}}</code>&nbsp;&nbsp;</span>
+            </div>
+            <hr></hr>
+            <h4>Type Ratings:</h4>
+            <div ng-repeat="rating in vm.pilotdata.typeratings">
+                Aircraft {{$index + 1}}: <code>{{rating.description}}</code> / Limitations: <span ng-repeat="limitation in rating.limitations"><code>{{limitation}}</code>&nbsp;&nbsp;</span>
+            </div>
+            <hr></hr>
+            <h4>Logbook:</h4>
+            <div ng-repeat="entry in vm.pilotdata.logbook">
+                {{entry.type}}: <code>{{entry.time}}</code></br>
+            </div>
+
+            </br>
+            <a href="/pilotdata/edit/{{vm.pilotdata._id}}"><i class="fa fa-pencil-square-o"></i></a>
+           
+            <!--
+            <a ng-click="vm.delete(vm.pilotdata._id)"><i class="fa fa-trash"></i></a>
+            -->
+
+	    </div>
+	 </div>
+</div>

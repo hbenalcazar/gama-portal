@@ -1,0 +1,59 @@
+<div class="container" ng-init="vm.find()">
+    <div class="center-block pilotdata-post">
+        <div class="row">
+            <div class="col-md-7 col-md-offset-3">
+                <h1>Edit Crew Data</h1>
+            </div>
+        </div>
+        <div class="row">
+            <form name="pilotdataForm" class="pilotdata-edit form-horizontal" role="form" data-ng-submit="vm.update(pilotdataForm.$valid)" novalidate>
+                
+<!--
+<h2 class="pilotdata-post-title">{{vm.pilotdata.title}}</h2>
+            ID: <code>{{ vm.pilotdata.crewcode }}</code>
+            <hr></hr>
+            <h4>Certificates:</h4>
+            <div ng-repeat="certificate in vm.pilotdata.certificates">
+                Type {{$index + 1}}: <code>{{certificate.type}}</code> / Number: <code>{{certificate.number}}</code> / Exp: <code>{{certificate.expiration}}</code></br>
+                &nbsp;- Endorsements: <span ng-repeat="endorsement in certificate.endorsements"><code>{{endorsement}}</code>&nbsp;&nbsp;</span>
+            </div>
+            <hr></hr>
+            <h4>Type Ratings:</h4>
+            <div ng-repeat="rating in vm.pilotdata.typeratings">
+                Aircraft {{$index + 1}}: <code>{{rating.description}}</code> / Limitations: <span ng-repeat="limitation in rating.limitations"><code>{{limitation}}</code>&nbsp;&nbsp;</span>
+            </div>
+            <hr></hr>
+            <h4>Logbook:</h4>
+            <div ng-repeat="entry in vm.pilotdata.logbook">
+                {{entry.type}}: <code>{{entry.time}}</code></br>
+            </div>
+
+            </br>
+            <a href="/pilotdata/edit/{{vm.pilotdata._id}}"><i class="fa fa-pencil-square-o"></i></a>
+
+-->
+
+                <div class="form-group" ng-class="{'has-warning': pilotdataForm.crewcode.$dirty && pilotdataForm.crewcode.$invalid, 'has-success': pilotdataForm.crewcode.$dirty && pilotdataForm.crewcode.$valid}">
+
+                    <label class="col-md-1 control-label">Crew Code:</label>
+                    <div class="col-md-9">
+
+                        <input name="crewcode" type="text" class="form-control" data-ng-model="vm.pilotdata.crewcode" id="crewcode" placeholder="Crewcode" ng-minlength="2" required>
+                        <p ng-show="pilotdataForm.crewcode.$error.required && pilotdataForm.crewcode.$dirty" class="help-block">Crew Code is required</p>
+                        <p ng-show="pilotdataForm.crewcode.$error.minlength" class="help-block">Crew Code must be at least 2 characters long</p>
+
+                    </div>
+                </div>
+                
+
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-9">
+                        <button type="submit" class="btn btn-info" ng-disabled="pilotdataForm.$invalid">Save</button>
+                        <a href="/pilotdata/list" class="btn btn-default">Cancel</a>
+                    </div>
+                </div>
+
+            </form>
+        </div><!-- /.row -->
+    </div>
+</div>

@@ -1,6 +1,7 @@
 ;(function () {
   'use strict'
 
+  // register all the services
   angular.module('app', [
     'app.core',
     'app.index',
@@ -9,6 +10,7 @@
     'app.user',
     'app.blog',
     'app.admin' ,
-    'app.scheduler' // training/scheduler module
+    'app.scheduler',
+    'app.pilotdata'
   ])
 })()
