@@ -43,14 +43,17 @@ function Mean (opts, done) {
   require('./server/error.js').middleware(self)
   // purgeMaxCdn - *** OPTIONAL ***  > Used to purge the max cdn cache of the file. We Support MAXCDN
   require('./server/cdn.js').maxCDN(self)
-  // auto  - connectMongoDb :  server > Used to finsh the final set up of the server. at the same time we start connecting to mongo and turning on the server.
+  
+  // auto  - connectMongoDb :  server 
+  //Used to finsh the final set up of the server. 
+  //At the same time we start connecting to mongo and turning on the server.
   if (self.settings.https.active) {
     https.createServer({
       key: fs.readFileSync(self.settings.https.key),
       cert: fs.readFileSync(self.settings.https.cert)
     }, self.app).listen(self.settings.https.port, function () {
-      self.logger.info('HTTPS Express server listening on port %d in %s mode', self.settings.https.port, self.app.get('env'))
-      debug('HTTPS Express server listening on port %d in %s mode', self.settings.https.port, self.app.get('env'))
+      self.logger.info('Gama Portal HTTPS Express server listening on PORT: %d in [%s] mode', self.settings.https.port, self.app.get('env'))
+      debug('Debug: Gama Portal HTTPS Express server listening on PORT: [%d] in %s mode', self.settings.https.port, self.app.get('env'))
       // Force SSL if the http is not active
       if (!self.settings.http.active) {
         var app = require('express')()
@@ -69,8 +72,8 @@ function Mean (opts, done) {
   // check if you set both to false we default to turn on http
   if (self.settings.http.active || (self.settings.https.active === false) === (self.settings.http.active === false)) {
     self.app.listen(self.app.get('port'), function () {
-      self.logger.info('HTTP Express server listening on port %d in %s mode', self.app.get('port'), self.app.get('env'))
-      debug('HTTP Express server listening on port %d in %s mode', self.app.get('port'), self.app.get('env'))
+      self.logger.info('### Jeves has fetched the Gama Portal App [Port: %d] [mode:%s]', self.app.get('port'), self.app.get('env'))
+      debug('### Jeves has fetched the Gama Portal App [Port: %d] [mode: %s]', self.app.get('port'), self.app.get('env'))
       done()
     })
   }

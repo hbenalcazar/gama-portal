@@ -1,0 +1,46 @@
+    "crewcode": "LAWS",
+
+    "certificates": [
+        {
+            "type": "ATP",
+            "number": "2770114",
+            "expiration": "N/A",
+            "endorsements": [
+                "English Proficient",
+                "Generally Awesome"
+            ]
+        },
+        {
+            "type": "CFI",
+            "number": "2770114CFI",
+            "expiration": "07/31/15"
+        }
+    ],
+
+    "typeratings": [
+        {
+            "description": "BE300",
+            "limitations": [
+                "SOE",
+                "SIC only"
+            ]
+        },
+        {
+            "description": "BE1900"
+        }
+    ],
+
+    "logbook": [
+        {
+            "type": "BE300",
+            "time": 35
+        },
+        {
+            "type": "BE1900",
+            "time": 2000
+        },
+        {
+            "type": "P180",
+            "time": 5000
+        }
+    ]

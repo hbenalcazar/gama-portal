@@ -1,4 +1,5 @@
 var mongoose = require('mongoose')
+<<<<<<< HEAD
 
 var schedulerSchema = mongoose.Schema({
   created: {
@@ -20,3 +21,16 @@ var schedulerSchema = mongoose.Schema({
 })
 
 module.exports = schedulerSchema
+=======
+var __name__Schema = mongoose.Schema({
+field1:{ 
+ type:String, 
+ default:"field1"
+},
+field2:{ 
+ type:Number, 
+ default:0
+} 
+})
+module.exports = __name__Schema
+>>>>>>> training

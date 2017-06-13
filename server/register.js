@@ -58,12 +58,14 @@ Register.prototype.getDownloadContents = function (self) {
   })
   debug('end getDownloadContents')
 }
+
 Register.prototype.getFolderContents = function (self) {
   debug('started Info')
 
   // var self = this
   self.transformFiles = []
   self.transformFolders = []
+
 
   function expandModules (arr, dir) {
     var returnConfigs = []
