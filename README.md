@@ -9,14 +9,14 @@
 [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/jasonhumphrey?utm_source=github&utm_medium=button&utm_term=jasonhumphrey&utm_campaign=github)
 [![Donatee](https://img.shields.io/badge/paypal-donate-blue.svg)](https://paypal.me/greenpioneer)
 
-[![meanstackjs Logo](http://meanstackjs.com/images/logo/header3x.png)](http://meanstackjs.com/)
+[![Gama Logo](http://)](http://gamatraining.com/)
 
 
 
 Why Mean Stack JS
 -----------------
 
-The best developers want to be efficient and productive, quickly prototyping and experimenting, able to build successes into production-ready applications. We believe Mean Stack JS gives developers of all skill levels—whether at enterprise scale or working solo—an ideal open-source toolset for building rapid, scalable Javascript applications. We'll provide you a simple project structure that is versatile enough to quickly apply to your own development projects. Want to get started?
+Cus it rocks?
 
 
 How to Learn Mean Stack JS
@@ -124,4 +124,3 @@ node index.js
 
 
 [MIT][license] © [Green Pioneer][website]
-
