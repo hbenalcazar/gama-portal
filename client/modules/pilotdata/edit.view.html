@@ -22,11 +22,7 @@
             <div ng-repeat="rating in vm.pilotdata.typeratings">
                 Aircraft {{$index + 1}}: <code>{{rating.description}}</code> / Limitations: <span ng-repeat="limitation in rating.limitations"><code>{{limitation}}</code>&nbsp;&nbsp;</span>
             </div>
-            <hr></hr>
-            <h4>Logbook:</h4>
-            <div ng-repeat="entry in vm.pilotdata.logbook">
-                {{entry.type}}: <code>{{entry.time}}</code></br>
-            </div>
+
 
             </br>
             <a href="/pilotdata/edit/{{vm.pilotdata._id}}"><i class="fa fa-pencil-square-o"></i></a>
@@ -38,13 +34,49 @@
                     <label class="col-md-1 control-label">Crew Code:</label>
                     <div class="col-md-9">
 
-                        <input name="crewcode" type="text" class="form-control" data-ng-model="vm.pilotdata.crewcode" id="crewcode" placeholder="Crewcode" ng-minlength="2" required>
+                        <input name="crewcode2" type="text" class="form-control" data-ng-model="vm.pilotdata.crewcode" id="crewcode" placeholder="Crewcode" ng-minlength="2" required>
                         <p ng-show="pilotdataForm.crewcode.$error.required && pilotdataForm.crewcode.$dirty" class="help-block">Crew Code is required</p>
                         <p ng-show="pilotdataForm.crewcode.$error.minlength" class="help-block">Crew Code must be at least 2 characters long</p>
 
                     </div>
                 </div>
-                
+
+                <hr></hr>
+
+                <!-- LOGBOOK -->
+                <h4>Logbook:</h4>
+                <table class="table table-bordered table-condensed">
+                  <tr>
+                    <th>Aircraft</th>
+                    <th>PIC</th>
+                    <th>SIC/Dual</th>
+                    <th>Instructor</th>
+                    <th>Total</th>
+                    <th>Options</th>
+                  </tr>
+                  <tr ng-repeat="entry in vm.pilotdata.logbook">
+                    <td>{{entry.type}}</td>
+                    <td><input data-ng-model="inputPIC"></td>
+                    <td><input data-ng-model="inputSIC"></td>
+                    <td><input data-ng-model="inputInstructor"></td>
+                    <td><input name="time" type="text" data-ng-model="entry.time" id="time"></td>
+                    <td><a href="" data-ng-click="vm.deleteLogbookEntry(entry)"><i class="fa fa-trash-o"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><select ng-model="newType">
+                      <option value="BE300-PL21">BE300 Pro Line 21</option>
+                      <option value="BE300-FUSION">BE300 Fusion</option>
+                      <option value="CE560XL">CE-560XL</option>
+                    </select></td>
+                    <td><input></td>
+                    <td><input></td>
+                    <td><input></td>
+                    <td><input name="newTime" type="text" id="newTime" ng-model="newTime"></td>
+                    <td><a href="" data-ng-click="vm.addLogbookEntry(newType, newTime)"><i class="fa fa-plus"></i></a></td>
+                  </tr>
+                </table>
+
+
 
                 <div class="form-group">
                     <div class="col-md-offset-4 col-md-9">
