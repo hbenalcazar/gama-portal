@@ -9,12 +9,9 @@
     'app.footer',
     'app.user',
     'app.blog',
-    'app.admin' ,
-<<<<<<< HEAD
- 'app.scheduler' // DONT REMOVE - APP GENERATOR
-=======
+    'app.admin',
     'app.scheduler',
-    'app.pilotdata'
->>>>>>> training
+    'app.pilotdata',
+    'app.training'
   ])
 })()
