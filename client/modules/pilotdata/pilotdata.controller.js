@@ -13,8 +13,28 @@
     vm.pilotdata = {}
     vm.UserFactory = UserFactory
     activate()
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // ADD LOGBOOK ENTRY
+    vm.addLogbookEntry = function (newType, newTime){
+      var newEntry = {}
+      newEntry.type = newType
+      newEntry.time = newTime
 
-    /*
+      vm.pilotdata.logbook.push(newEntry)
+      vm.update(true)
+    }  
+
+    vm.getTotalTime = function (pic, sic){
+      return parseInt(pic) + parseInt(sic)
+    }
+
+    vm.deleteLogbookEntry = function (entry){
+      var index = vm.pilotdata.logbook.indexOf(entry)
+      vm.pilotdata.logbook.splice(index, 1)
+      vm.update(true)
+    }
+
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // CREATE
     vm.create = function (validated) {
@@ -32,21 +52,29 @@
         logger.error(error)
       })
     }
-    */
+    
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // FIND    
     vm.find = function () {
-      PilotdataFactory.get({
-        id: '593caa2cd7315b4f0de6df01' //$stateParams.id
-      }, function (success) {
-        vm.pilotdata = success
-      }, function (error) {
-        logger.error(error)
-      })
+
+      //console.log("$stateParams: " + JSON.stringify($stateParams))
+
+      PilotdataFactory.get(
+        {
+          id: '593caa2cd7315b4f0de6df01' 
+          //id: $stateParams.id 
+        }, 
+        function (success) {
+          vm.pilotdata = success
+        }, 
+        function (error) {
+          logger.error(error)
+        }
+      )
     }
 
-    /*
+    
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // LIST
     vm.list = function () {
@@ -56,7 +84,7 @@
         logger.error(error)
       })
     }
-    */
+    
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // UPDATE
@@ -75,7 +103,7 @@
       )
     }
 
-    /*
+    
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // DELETE
     vm.delete = function (pilotdataId) {
@@ -98,7 +126,7 @@
           })
       }
     }
-    */
+    
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // ACTIVATE    
