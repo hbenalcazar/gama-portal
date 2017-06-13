@@ -1,8 +1,7 @@
 var mongoose = require('mongoose')
 var __name__Schema = mongoose.Schema({
 testField1:{ 
- type:String, 
- default:test_value1
+ type:String
 },
 testField2:{ 
  type:Number, 
