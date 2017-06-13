@@ -1,0 +1,33 @@
+<div class="container" ng-init="vm.list()">
+  <div class="row">
+      <div class="col-sm-12 training-header text-center">
+        <h1 class="training-title">MeanStackJS Trainings</h1>
+        <p class="lead training-description">Using the official example template of creating a training module with Bootstrap.</p>
+      </div>
+  </div> 
+  <div class="row">
+    <div class="center-block training-main ">
+      <div ng-show="vm.trainings.length == 0">
+        <h3>No Training Data Points</h3>
+        <a class="btn btn-primary" href="/training/create">Create One Now</a>
+      </div>
+      
+      <div class="training-post" ng-repeat="(key, value) in vm.trainings | orderBy:'-date'">
+        <a href="/training/view/{{value._id}}"><h2 class="training-post-title">{{value.title}}</h2></a>
+        <span ng-show="vm.UserFactory.loggedin">
+          <a href="/training/edit/{{value._id}}"><i class="fa fa-pencil-square-o"></i></a>
+          <a ng-click="vm.delete(value._id)"><i class="fa fa-trash"></i></a>
+        </span>
+        
+        <p class="training-post-meta">
+          on {{value.created |date:'medium'}}
+        </p>
+        
+        <p>{{value.content}}</p>
+      </div><!-- /.training-post -->
+
+    </div><!-- /.training-main -->
+
+  </div>
+    
+</div>
