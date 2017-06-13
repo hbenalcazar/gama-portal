@@ -6,8 +6,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/greenpioneersolutions/meanstackjs/badge.svg)](https://snyk.io/test/github/greenpioneersolutions/meanstackjs/badge.svg)
 [![Codewake](https://www.codewake.com/badges/codewake2.svg)](https://www.codewake.com/p/meanstackjs)
 [![Code Triagers Badge](https://www.codetriage.com/greenpioneersolutions/meanstackjs/badges/users.svg)](https://www.codetriage.com/greenpioneersolutions/meanstackjs)
-[![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/jasonhumphrey?utm_source=github&utm_medium=button&utm_term=jasonhumphrey&utm_campaign=github)
-[![Donatee](https://img.shields.io/badge/paypal-donate-blue.svg)](https://paypal.me/greenpioneer)
+
 
 [![Gama Logo](http://)](http://gamatraining.com/)
 
