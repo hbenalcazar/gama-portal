@@ -20,7 +20,9 @@
                             <th scope="row">{{$index + 1}}</th>
                             <td>
                                 <img width="50" ng-src="{{value.gravatar}}">
-                                <span>{{value.profile.name}}</span>                            
+                                <span>{{value.profile.name}}</span>
+                                <span>{{value.profile.middleName}}</span>
+                                <span>{{value.profile.lastName}}</span>                            
                             </td>
                             <td> 
                                 <div ng-repeat="role in value.roles track by $index">{{role}}</div>

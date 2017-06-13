@@ -2,7 +2,12 @@ var mongoose = require('mongoose')
 
 var __name__Schema = mongoose.Schema({
 
-crewcode:{ 
+user_id: {
+  type: mongoose.Schema.Types.ObjectId,
+  unique: true
+},
+
+crewcode: { 
  type:String, 
  default:null
 },
@@ -21,7 +26,6 @@ logbook:{
  type:Array, 
  default:[]
 }
-
 
 })
 

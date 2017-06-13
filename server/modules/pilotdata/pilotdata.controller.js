@@ -24,15 +24,15 @@ function getPilotdata (req, res, next) {
   })
 }
 
-/*
+
 function deletePilotdata (req, res, next) {
   req.pilotdata.remove(function () {
     res.status(204).send()
   })
 }
-*/
 
-/*
+
+
 function postPilotdata (req, res, next) {
   // req.assert('name', 'The name cannot be blank').notEmpty()
 
@@ -50,20 +50,24 @@ function postPilotdata (req, res, next) {
     return res.status(201).send(data)
   })
 }
-*/
+
 
 function putPilotdata (req, res, next) {
-  req.pilotdata = _.merge(req.pilotdata, req.body)
+
+  req.pilotdata = _.assign(req.pilotdata, req.body)
+  
   req.pilotdata.save(function (error) {
     if (error) return next(error)
     return res.status(200).send(req.pilotdata)
   })
+  
 }
 
 
 function getPilotdataById (req, res, next) {
   res.send(req.pilotdata)
 }
+
 
 function paramPilotdata (req, res, next, id) {
   req.assert('pilotdataId', 'Your Pilotdata ID cannot be blank').notEmpty()
